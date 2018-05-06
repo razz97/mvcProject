@@ -1,2 +1,2 @@
 # mvcProject
-Practice using an MVC framework called slim.
+Small app using a MVC framework for php called slim.
