@@ -1,0 +1,72 @@
+html, body {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+header {
+	text-align: center;
+	height:auto;
+	margin-top: 2%;
+}
+h1,h3{
+	margin: 0;
+	padding: 0;
+}
+h3 {
+	display: block;
+	text-align: center;
+}
+table {
+	display: inline-block;
+}
+td,th {
+	text-align: left;
+}
+#submit {
+	text-align: center;
+	padding-top: 5%;
+}
+#divReceived,#divSent{
+	display: inline-block;
+	width: 49%;
+	height: 40%;
+	margin-top: 6%;
+	text-align: center;
+	vertical-align: top;
+}
+.show {
+	overflow-y: scroll;
+	height: 90%;
+}
+.show, .show tbody, .show tr{
+	display:block;
+}
+.show th, .show td {
+	width:32%;
+	height: 100%;
+	display: inline-block;
+	border: 0.5px solid;
+	border-collapse: collapse;
+}
+#forVerticalAlign {
+	display: inline-block;
+	width: 0;
+	height: 30%;
+}
+p {
+	font-size: 20px;
+	margin-left:5%;
+	color:red;
+}
+#divLogout_Info, #divSend {
+	display: inline-block;
+	width: 49%;
+	height: 30%;
+	margin-top: 2%;
+	text-align: center;
+	vertical-align: top;
+}
+form {
+	margin-top: 2%;
+}
