@@ -20,17 +20,16 @@ class Database {
         $compUser = "select usr from user where usr='" . $data["usr"] . "'";
         $result = $this->_con->query($compUser);
         if ($result !== null && $result->rowCount() > 0) {
-            $response = "Username already in use.";
+            return "Username already in use.";
         } else {
             $query = "insert into user values (null,'" . $data["usr"] . "','$hash')";
             try {
-                $result = $this->_con->exec($query);
+                $resultInsert = $this->_con->exec($query);
             } catch (PDOException $e) {
-                $response = false;
+                return "Unexpected error";
             }
-            $response = true;
+            return true;
         }
-        return $response;
     }
 
     public function authentificate($data) {

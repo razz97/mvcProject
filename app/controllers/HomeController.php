@@ -41,7 +41,7 @@ class HomeController extends Controller {
                     return $response->withHeader('Location', '/');
                 }
             } else {
-                $this->flash->addMessage('info', "<p id='err'>Connection to database failed</p>");
+                $this->flash->addMessage('info', "<p id='err'>Database connection failed.</p>");
                 return $response->withHeader('Location', '/');
             }
         } else {
