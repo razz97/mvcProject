@@ -19,16 +19,16 @@ class Database {
         $hash = password_hash($data["passwd"], PASSWORD_BCRYPT);
         $compUser = "select usr from user where usr='" . $data["usr"] . "'";
         $result = $this->_con->query($compUser);
-        if ($result !== null && $res->rowCount() > 0) {
+        if ($result !== null && $result->rowCount() > 0) {
             $response = "Username already in use.";
         } else {
             $query = "insert into user values (null,'" . $data["usr"] . "','$hash')";
-            $result = $this->_con->exec($compUser);
             try {
                 $result = $this->_con->exec($query);
             } catch (PDOException $e) {
-                return false;
+                $response = false;
             }
+            $response = true;
         }
         return $response;
     }
@@ -78,4 +78,5 @@ class Database {
         }
         return true;
     }
+
 }
