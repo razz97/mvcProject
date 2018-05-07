@@ -5,18 +5,6 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link href="style/home.css" rel="stylesheet" type="text/css"/>
-        <style>
-            .info{
-                border: 1px solid red;
-                background-color: rgb(255, 200,200);
-                color:red;
-                border-radius: 5px;
-                box-shadow: 1px 1px 4px gray;
-                padding: 10px;
-                margin: 1em auto;
-                width: 400px;
-            }
-        </style>
     </head>
     <body>
         <header>
