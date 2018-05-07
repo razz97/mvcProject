@@ -37,11 +37,10 @@ class PhpRenderer
      * @param string $templatePath
      * @param array $attributes
      */
-    public function __construct($templatePath = "", $flash , $attributes = [] )
+    public function __construct($templatePath = "", $attributes = [] )
     {
         $this->templatePath = rtrim($templatePath, '/\\') . '/';
         $this->attributes = $attributes;
-		$this->flash = $flash;
     }
 
     /**
