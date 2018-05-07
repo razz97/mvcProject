@@ -4,7 +4,8 @@ namespace App\Controllers;
 
 class Controller {
 	/* All the other controllers will inherit from this class
-	Adds accessibility of DIC to the other controllers. */
+	Adds accessibility of DIC to the other controllers by the __get() method
+    Adds a constructor setting a container variable equal to application container */
 	
 	protected $container;
 	
