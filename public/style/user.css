@@ -54,11 +54,6 @@ td,th {
 	width: 0;
 	height: 30%;
 }
-p {
-	font-size: 20px;
-	margin-left:5%;
-	color:red;
-}
 #divLogout_Info, #divSend {
 	display: inline-block;
 	width: 49%;
@@ -69,4 +64,22 @@ p {
 }
 form {
 	margin-top: 2%;
+}
+#info {
+    position: fixed;
+    top:2%;
+    left: 2%;
+    border: 1px solid green;
+    background-color: rgb(102,255,102);
+    color:green;
+    border-radius: 5px;
+}
+#err{
+    position: fixed;
+    top:2%;
+    left: 2%;
+    border: 1px solid red;
+    background-color: rgb(255, 200,200);
+    color:red;
+    border-radius: 5px;
 }
