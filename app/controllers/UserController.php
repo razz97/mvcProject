@@ -23,8 +23,7 @@ class UserController extends Controller {
 	}
 
 	public function postMsg($request, $response) {
-		$err = sendMsg($request->getParsedBody());
-		if ($err === true) {
+		if (sendMsg($request->getParsedBody()) === true) {
 			$this->flash->addMessage('info', "Message sent.");
 		} else {
 			$this->flash->addMessage('info', "There was an unexpected error.");
@@ -33,8 +32,9 @@ class UserController extends Controller {
 	}
 	
 	public function logOut($request, $response) {
-		session_destroy();
-		session_start();
+//		session_destroy();
+        $_SESSION["usr"]=null;
+//		session_start();
 		$this->flash->addMessage('info', "You've logged out, good bye!");
 		return $response->withHeader('Location', '/');
 	}
