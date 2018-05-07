@@ -16,7 +16,7 @@
 				<tr><th>Sender</th><th>Subject</th><th>Body</th></tr>
 				<?php
 				if (isset($data["received"])) {
-					foreach ($data["received"] as $msg) {
+					foreach ($received as $msg) {
 						echo "<tr><td>" . $msg["sender"] . "</td><td>" . $msg["subject"] . "</td><td>" . $msg["body"] . "</td></tr>";
 					}
 					
@@ -31,7 +31,7 @@
 			<table class="show">
 				<tr><th>Receiver</th><th>Subject</th><th>Body</th></tr>
 				<?php
-				if (isset($data["sent"])) {
+				if (isset($sent)) {
 					foreach ($data["sent"] as $msg) {
 						echo "<tr><td>" . $msg["receiver"] . "</td><td>" . $msg["subject"] . "</td><td>" . $msg["body"] . "</td></tr>";
 					}
@@ -49,8 +49,8 @@
 					<tr><td><label for="receiver">User: </label></td><td>
 							<select name="receiver" id="receiver">
 								<?php
-								foreach ($data["users"] as $usr) {
-									echo "<option>" . $usr[0] . "</option>";
+								foreach ($users as $usr) {
+									echo "<option>" . $usr["usr"] . "</option>";
 								}
 								?>
 							</select></td></tr>
@@ -63,7 +63,7 @@
 			</form>
 		</div>
 		<div id="divLogout_Info">
-			<p><?php echo $this->flash->getMessage('info')[0]; ?></p>
+			<p><?php echo $flash->getMessage('info')[0]; ?></p>
 			<form action="/user/logOut" method="get">
 				<input type="submit" name="submitLogOut" value="Log Out">
 			</form>
