@@ -17,7 +17,7 @@
 			<form method="GET" action="/authentification">
 				<table>
 					<tr><td><label for="usr">Username: </label></td><td><input type="text" name="usr" id="usr" required /></td></tr>
-                    <tr><td><label for="passwd">Password: </label></td><td><input type="text" name="passwd" id="passwd" required /></td></tr>
+                    <tr><td><label for="passwd">Password: </label></td><td><input type="password" name="passwd" id="passwd" required /></td></tr>
 					<tr><td colspan="2" class="submit"><input type="submit" name="loginSubmit" id="loginSubmit" value="Log in" /></td></tr>						
 				</table>
 			</form>
@@ -27,8 +27,8 @@
 			<form method="POST" action="/register">
 				<table>
 					<tr><td><label for="usr">Username: </label></td><td><input type="text" name="usr" id="usr" required /></td></tr>
-					<tr><td><label for="passwd">Password: </label></td><td><input type="text" name="passwd" id="passwd" required /></td></tr>
-					<tr><td><label for="passwdRepeat">Repeat password: </label></td><td><input type="text" name="passwdRepeat" id="passwdRepeat" required /></td></tr>
+                    <tr><td><label for="passwd">Password: </label></td><td><input type="password" name="passwd" id="passwd" required /></td></tr>
+                    <tr><td><label for="passwdRepeat">Repeat password: </label></td><td><input type="password" name="passwdRepeat" id="passwdRepeat" required /></td></tr>
 					<tr><td colspan="2" class="submit"><input type="submit" name="loginSubmit" id="loginSubmit" value="Register" /></td></tr>
 				</table>
 			</form>
