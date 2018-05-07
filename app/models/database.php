@@ -44,7 +44,7 @@ class Database {
     }
 
     public function getMessages($usr) {
-        $query = "select * from message where sender='$usr' or receiver='$usr' order by idmsg";
+        $query = "select * from message where sender='$usr' or receiver='$usr' order by idmsg desc";
         $result = $this->_con->query($query);
         while ($row = $result->fetch()) {
             if ($row["sender"] == $usr) {
