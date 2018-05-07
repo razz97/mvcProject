@@ -1,14 +1,14 @@
 <?php
-$app->get('/', 'HomeController:getHomepage');
+$app->get('/', '\App\Controllers\HomeController:getHomepage');
 
-$app->get('/authentification', 'HomeController:authentificate');
+$app->get('/authentification', '\App\Controllers\HomeController:authentificate');
 
-$app->post('/register', 'HomeController:register');
+$app->post('/register', '\App\Controllers\HomeController:register');
 
-$app->get('/user', 'UserController:getUserpage');
+$app->get('/user', '\App\Controllers\UserController:getUserpage');
 
-$app->post('/user/newMsg', 'UserController:postMsg');
+$app->post('/user/newMsg', '\App\Controllers\UserController:postMsg');
 
-$app->get('/user/logOut', 'UserController:logout');
+$app->get('/user/logOut', '\App\Controllers\UserController:logout');
 
 
